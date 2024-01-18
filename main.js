@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
     // Add and remove line styling on list item click
-    $('ul').on('click', 'li', function () {
+    $('ul').on('click', 'li span', function () {
         $(this).toggleClass('completed');
     });
 

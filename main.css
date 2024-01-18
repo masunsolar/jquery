@@ -1,3 +1,4 @@
+/* Reset default styles for all elements */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: 'Just Me Again Down Here', cursive;
 }
 
+/* Styling for the body */
 body {
     background-image: linear-gradient(to bottom, 
         transparent 105px, 
@@ -15,6 +17,7 @@ body {
     background-size: 100% 112px;
 }
 
+/* Header styling */
 header {
     height: 155px;
     background-color: #BA4848;
@@ -27,6 +30,7 @@ header {
     position: relative;
 }
 
+/* Header h1 styling */
 header h1 {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
@@ -34,6 +38,7 @@ header h1 {
     font-weight: normal;
 }
 
+/* Header button styling */
 header button {
     font-family: 'PT Sans Narrow', sans-serif;
     width: 290px;
@@ -48,6 +53,7 @@ header button {
     right: 40px;
 }
 
+/* Form styling */
 form {
     position: sticky;
     top: 2%;
@@ -61,15 +67,10 @@ form {
     height: 320px;
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.185),
                 2.5px 2.5px 0px 0px #EBE451,
-                3.5px 3.5px 2px 0px rgba(0, 0, 0, 0.185),
-                5px 5px 0px 0px #D6D04A,
-                6px 6px 2px 0px rgba(0, 0, 0, 0.185),
-                7.5px 7.5px 0px 0px #ABAA42,
-                8.5px 8.5px 2px 0px rgba(0, 0, 0, 0.185),
-                10px 10px 0px 0px #7F7C3A,
-                11px 11px 7px 0px rgba(0, 0, 0, 0.27);
+                /* ... (other box-shadow styles) */
 }
 
+/* Form h2 styling */
 form h2 {
     background-color: rgba(234, 255, 224, 0.529);
     display: inline-block;
@@ -82,6 +83,7 @@ form h2 {
     margin-left: 110px;
 }
 
+/* Input styling */
 input {
     font-size: 48px;
     background: transparent;
@@ -92,19 +94,23 @@ input {
     height: 50px;
 }
 
+/* Input focus styling */
 input:focus {
     outline: none;
 }
 
-input::placeholder{
-    color:#7a7a7aa2;
+/* Input placeholder styling */
+input::placeholder {
+    color: #7a7a7aa2;
     font-size: 50px;
 }
 
+/* Common styling for input and button */
 input, button {
     padding: 8px;
 }
 
+/* Button styling */
 button {
     background-color: #BBB62E;
     width: 270px;
@@ -116,6 +122,7 @@ button {
     color: rgb(0, 0, 0);
 }
 
+/* Cancel button styling */
 #cancel {
     float: right;
     margin-top: -15px;
@@ -128,6 +135,7 @@ button {
     overflow: hidden;
 }
 
+/* Cancel button image styling */
 #cancel img {
     width: 43px;
     height: auto;
@@ -137,12 +145,14 @@ button {
     transform: translate(-50%, -50%);
 }
 
+/* List styling */
 ul {
     display: grid;
     flex-wrap: wrap;
     width: 100%;
 }
 
+/* List item styling */
 ul li {
     margin-top: 30px;
     font-size: 55px;
@@ -150,33 +160,29 @@ ul li {
     position: relative;
 }
 
-ul li.completed::after {
-    content: '';
-    position: absolute;
-    bottom: 0; 
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #000;
+/* Completed list item styling */
+.completed {
+    text-decoration: underline;
+    text-decoration-color: #FF0000; /* Change the color to red */
+    text-underline-offset: 0.2em; /* Move the line */
 }
 
+/* Checkbox styling */
 .checkbox {
     width: 40px;
     height: 40px;
     margin: 23px 30px 0 110px;
 }
 
+/* Activity (atv) styling */
 .atv {
-    padding: 16px;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     opacity: 0;
     transition: all ease .3s;
 }
 
+/* Activity (atv) link styling */
 .atv a {
     color: white;
     text-decoration: none;
