@@ -17,6 +17,16 @@ body {
     background-size: 100% 112px;
 }
 
+/* Footer styling */
+footer {
+    font-size: 31px;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+
 /* Header styling */
 header {
     height: 155px;
@@ -65,9 +75,15 @@ form {
     margin: 20px auto;
     box-sizing: border-box;
     height: 320px;
-    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.185),
-                2.5px 2.5px 0px 0px #EBE451,
-                /* ... (other box-shadow styles) */
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.185), 
+        2.5px 2.5px 0px 0px #EBE451, 
+        3.5px 3.5px 2px 0px rgba(0, 0, 0, 0.185), 
+        5px 5px 0px 0px #D6D04A, 
+        6px 6px 2px 0px rgba(0, 0, 0, 0.185), 
+        7.5px 7.5px 0px 0px #ABAA42, 
+        8.5px 8.5px 2px 0px rgba(0, 0, 0, 0.185), 
+        10px 10px 0px 0px #7F7C3A, 
+        11px 11px 7px 0px rgba(0, 0, 0, 0.27);
 }
 
 /* Form h2 styling */
@@ -145,6 +161,8 @@ button {
     transform: translate(-50%, -50%);
 }
 
+
+
 /* List styling */
 ul {
     display: grid;
@@ -172,6 +190,13 @@ ul li {
     width: 40px;
     height: 40px;
     margin: 23px 30px 0 110px;
+}
+
+/* When the checkbox is checked, the text is struck through */
+.checkbox:checked ~ span {
+    text-decoration: line-through;
+    text-decoration-color: rgba(27, 142, 27, 0.921); 
+    text-decoration-thickness: 4px;
 }
 
 /* Activity (atv) styling */
