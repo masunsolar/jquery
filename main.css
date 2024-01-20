@@ -6,7 +6,7 @@
     font-family: 'Just Me Again Down Here', cursive;
 }
 
-/* Styling for the body */
+/* Body styling */
 body {
     background-image: linear-gradient(to bottom, 
         transparent 105px, 
@@ -15,17 +15,34 @@ body {
         #989898 102px, 
         #989898 112px);
     background-size: 100% 112px;
+    position: relative;
+}
+
+/* Add a line to the left side of the page */
+body::before {
+    content: '';
+    position: fixed;
+    left: 140px;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background-color: #ff0000; 
+    z-index: 9999; 
 }
 
 /* Footer styling */
 footer {
     font-size: 31px;
-    width: 100%;
+    width: 20%;
     padding: 8px;
     text-align: center;
     position: fixed;
     bottom: 0;
-    background-color: #f1f1f1; /* Adicionei um exemplo de cor de fundo */
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: #f1f1f1;
+    border-radius: 100% 100% 0 0;
 }
 
 /* Header styling */
@@ -39,6 +56,7 @@ header {
     align-items: center;
     border-bottom: 9px solid #8E1717;
     position: relative;
+    z-index: 10000;
 }
 
 /* Header h1 styling */
@@ -85,6 +103,7 @@ form {
         8.5px 8.5px 2px 0px rgba(0, 0, 0, 0.185), 
         10px 10px 0px 0px #7F7C3A, 
         11px 11px 7px 0px rgba(0, 0, 0, 0.27);
+    z-index: 9999;
 }
 
 /* Form h2 styling */
@@ -162,8 +181,6 @@ button {
     transform: translate(-50%, -50%);
 }
 
-
-
 /* List styling */
 ul {
     display: grid;
@@ -173,6 +190,7 @@ ul {
 
 /* List item styling */
 ul li {
+    margin-left: 90px;
     margin-top: 30px;
     font-size: 55px;
     display: flex;
@@ -182,8 +200,8 @@ ul li {
 /* Completed list item styling */
 .completed {
     text-decoration: underline;
-    text-decoration-color: #FF0000; /* Change the color to red */
-    text-underline-offset: 0.2em; /* Move the line */
+    text-decoration-color: #FF0000;
+    text-underline-offset: 0.2em;
 }
 
 /* Checkbox styling */
