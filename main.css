@@ -23,8 +23,9 @@ footer {
     width: 100%;
     padding: 8px;
     text-align: center;
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    background-color: #f1f1f1; /* Adicionei um exemplo de cor de fundo */
 }
 
 /* Header styling */
