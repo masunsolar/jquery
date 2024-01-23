@@ -8,6 +8,16 @@ $(document).ready(function () {
     $('#cancel').click(function () {
         $('form').slideUp();
     });
+    let savedDescription = '';
+
+    // Show pop-up for activity description on stuffs button click
+    $('form').on('click', '.stuffs', function () {
+        const description = prompt('Digite a descrição da atividade:');
+        if (description !== null) {
+            // You can handle the description as needed (e.g., store it, display it, etc.)
+            console.log('Descrição da atividade:', description);
+        }
+    });
 
     // Add and remove line styling on list item click
     $('ul').on('click', 'li span', function () {
@@ -25,8 +35,16 @@ $(document).ready(function () {
             // Add the text to the list item
             $(`<span>${text}</span>`).appendTo(newItem);
 
+            if (savedDescription !== '') {
+                const newItem = $('<li style="display: none"></li>');
+
+                $(`<span class="description">${savedDescription}</span>`).appendTo(newItem);
+            }
+
             // Add a checkbox behind the text
             $(`<input type="checkbox" class="checkbox">`).prependTo(newItem);
+
+            $(`<input type="button" class="descrip"><img class="plus" src="./img/mais.png"></img>`).prependTo(newItem);
 
             // Append new item to the list, fadeIn, and clear input
             $('ul').append(newItem);

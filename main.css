@@ -8,14 +8,13 @@
 
 /* Body styling */
 body {
-    background-image: linear-gradient(to bottom, 
-        transparent 62px, 
-        #ffffff 62px,
-        #ffffff 60px, 
-        #989898 60px, 
-        #989898 65px);
+    background: linear-gradient(to bottom, 
+                                    transparent 62px, 
+                                    #ffffff 62px, 
+                                    #ffffff 60px, 
+                                    #989898 60px, 
+                                    #989898 65px);
     background-size: 100% 65px;
-    position: relative;
     background-position-y: 110px;
 }
 
@@ -23,7 +22,7 @@ body {
 body::before {
     content: '';
     position: fixed;
-    left: 120px;
+    left: 130px;
     top: 0;
     bottom: 0;
     width: 4px;
@@ -95,7 +94,8 @@ form {
     margin: 20px auto;
     box-sizing: border-box;
     height: 280px;
-    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.185), 
+    box-shadow: 
+        1px 1px 2px 0px rgba(0, 0, 0, 0.185), 
         2.5px 2.5px 0px 0px #EBE451, 
         3.5px 3.5px 2px 0px rgba(0, 0, 0, 0.185), 
         5px 5px 0px 0px #D6D04A, 
@@ -105,31 +105,6 @@ form {
         10px 10px 0px 0px #7F7C3A, 
         11px 11px 7px 0px rgba(0, 0, 0, 0.27);
     z-index: 9999;
-}
-
-form::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 40px 40px 0; /* Ajuste esses valores para mudar o tamanho do canto dobrado */
-    border-color: transparent #ABAA42 #ebe3515c transparent; /* A cor do canto dobrado deve ser a mesma do fundo do elemento */
-}
-
-form::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    margin-left: 3px;
-    border-width: 0 40px 40px 0; /* Ajuste esses valores para mudar o tamanho do canto dobrado */
-    border-color: transparent transparent #ebe351 transparent; /* A cor do canto dobrado deve ser a mesma do fundo do elemento */
 }
 
 /* Form h2 styling */
@@ -151,7 +126,7 @@ input {
     background: transparent;
     border: none;
     border-bottom: 2.5px solid #7A7A7A;
-    margin: 70px 210px 0 30px;
+    margin: 70px 0px 0 30px;
     width: 350px;
     height: 40px;
 }
@@ -174,7 +149,6 @@ input, button {
 
 /* Button styling */
 button {
-    background-color: #BBB62E;
     width: 160px;
     height: 65px;
     line-height: 6px;
@@ -182,6 +156,22 @@ button {
     cursor: pointer;
     font-size: 42px;
     color: rgb(0, 0, 0);
+}
+.add{
+    background-color: #BBB62E;
+}
+
+.stuffs{
+    background-color: transparent; 
+    width: 40px;
+    height: 40px;
+    margin-right: 165px;
+    padding: 0px;
+}
+
+.stuffs img{
+    width: 27px;
+    height: auto;
 }
 
 /* Cancel button styling */
@@ -214,10 +204,8 @@ ul {
     width: 100%;
 }
 
-/* List item styling */
 ul li {
-    margin-left: 90px;
-    margin-top: 7px;
+    margin: 4.175px 0 4.175px 90px;
     font-size: 38px;
     display: flex;
     position: relative;
@@ -227,14 +215,14 @@ ul li {
 .completed {
     text-decoration: underline;
     text-decoration-color: #FF0000;
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.1em;
 }
 
 /* Checkbox styling */
 .checkbox {
     width: 30px;
     height: 30px;
-    margin: 15px 30px 0 110px;
+    margin: 15px 30px 0 0px;
 }
 
 /* When the checkbox is checked, the text is struck through */
@@ -244,16 +232,14 @@ ul li {
     text-decoration-thickness: 4px;
 }
 
-/* Activity (atv) styling */
-.atv {
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    opacity: 0;
-    transition: all ease .3s;
+.descrip{
+    width: 0px;
+    height: 0px;
+    display: none;
 }
 
-/* Activity (atv) link styling */
-.atv a {
-    color: white;
-    text-decoration: none;
+.plus{
+    margin: 15px 30px 0 0px;
+    width: 27px;
+    height: 27px;
 }
