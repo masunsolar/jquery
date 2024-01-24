@@ -8,7 +8,6 @@ $(document).ready(function () {
     $('#cancel').click(function () {
         $('form').slideUp();
     });
-    let savedDescription = '';
 
     // Show pop-up for activity description on stuffs button click
     $('form').on('click', '.stuffs', function () {
@@ -30,16 +29,10 @@ $(document).ready(function () {
         const text = $('#nameAtv').val().trim();
 
         if (text !== '') {
-            const newItem = $('<li style="display: none"></li>');
+            const newItem = $('<li style="display: none;"></li>');
 
             // Add the text to the list item
-            $(`<span>${text}</span>`).appendTo(newItem);
-
-            if (savedDescription !== '') {
-                const newItem = $('<li style="display: none"></li>');
-
-                $(`<span class="description">${savedDescription}</span>`).appendTo(newItem);
-            }
+            const span = $(`<span>${text}</span>`).appendTo(newItem);
 
             // Add a checkbox behind the text
             $(`<input type="checkbox" class="checkbox">`).prependTo(newItem);
@@ -48,8 +41,21 @@ $(document).ready(function () {
 
             // Append new item to the list, fadeIn, and clear input
             $('ul').append(newItem);
-            newItem.fadeIn(200);
+            newItem.fadeIn();
+
+            // Apply typing effect to the newly added span element
+            typeWriter(span);
+
             $('#nameAtv').val('');
         }
     });
+
+    // Function to simulate typing effect
+    function typeWriter(element) {
+        const textArray = element.text().split('');
+        element.text('');
+        textArray.forEach((letra, i) => {
+            setTimeout(() => element.text(element.text() + letra), 60 * i);
+        });
+    }
 });
