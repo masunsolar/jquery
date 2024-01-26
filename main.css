@@ -92,7 +92,7 @@ form {
     display: none;
     width: 100%;
     max-width: 780px;
-    margin: 20px auto 56px;
+    margin: 20px auto 53px;
     box-sizing: border-box;
     height: 250px;
     box-shadow: 
@@ -215,7 +215,7 @@ ul {
 
 /* Styling for list items within the unordered list */
 ul li {
-    margin: 3.521px 0 3.521px 90px; 
+    margin: 3.6670px 0 3.6670px 90px; 
     font-size: 38px; 
     display: flex; 
     position: relative; 
