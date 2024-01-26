@@ -243,3 +243,17 @@ ul li {
     width: 27px;
     height: 27px;
 }
+
+.button_remove{
+    background-color: transparent;
+    width: 60px;
+    height: auto;
+    margin-left: auto;
+    padding: 0px;
+}
+
+.button_remove img{
+    width: 30px;
+    height: auto;
+    text-align: center;
+}
