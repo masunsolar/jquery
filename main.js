@@ -43,8 +43,8 @@ $(document).ready(function () {
 
     // Add and remove line styling on list item click
     $('ul').on('click', 'li span', function () {
-        // Toggle the 'completed' class when clicking on a list item's text
-        $(this).toggleClass('completed');
+        // Toggle the 'warning' class when clicking on a list item's text
+        $(this).toggleClass('warning');
     });
 
     // Submit form and add a new item to the list
@@ -61,11 +61,11 @@ $(document).ready(function () {
             // Add a checkbox behind the text
             $(`<input type="checkbox" class="checkbox">`).appendTo(newItem);
 
-            // Add the text to the list item
-            const span = $(`<span>${text}</span>`).appendTo(newItem);
-
             // Add a button to remove the item
             $(`<button class="button_remove"><img class="button_remove" src="./img/borracha.png"></img></button>`).appendTo(newItem);
+
+            // Add the text to the list item
+            const span = $(`<span>${text}</span>`).appendTo(newItem);
 
             // Append the new item to the list, fadeIn, and clear input
             $('ul').append(newItem);
