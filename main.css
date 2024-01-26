@@ -10,12 +10,13 @@
 body {
     background: linear-gradient(to bottom, 
                                     transparent 62px, 
-                                    #ffffff 62px, 
-                                    #ffffff 60px, 
+                                    #add8e6 62px, 
+                                    #add8e6 60px, /* Azul claro substituindo o branco */
                                     #989898 60px, 
-                                    #989898 65px);
-    background-size: 100% 65px;
+                                    #989898 64px);
+    background-size: 100% 64px;
     background-position-y: 110px;
+    background-color: rgba(0, 87, 255, 0.06);
 }
 
 /* Add a line to the left side of the page */
@@ -41,7 +42,7 @@ footer {
     right: 0;
     left: 0;
     margin: auto;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 87, 255, 0.10);;
     border-radius: 100% 100% 0 0;
 }
 
@@ -63,7 +64,7 @@ header {
 header h1 {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
-    font-size: 80px;
+    font-size: 75px;
     font-weight: normal;
 }
 
@@ -71,9 +72,9 @@ header h1 {
 header button {
     font-family: 'PT Sans Narrow', sans-serif;
     width: 210px;
-    height: 65px;
+    height: 57px;
     border-radius: 9px;
-    font-size: 30px;
+    font-size: 29px;
     font-weight: normal;
     text-transform: none;
     color: white;
@@ -90,10 +91,10 @@ form {
     padding: 24px 0;
     display: none;
     width: 100%;
-    max-width: 770px;
-    margin: 20px auto;
+    max-width: 780px;
+    margin: 20px auto 56px;
     box-sizing: border-box;
-    height: 280px;
+    height: 250px;
     box-shadow: 
         1px 1px 2px 0px rgba(0, 0, 0, 0.185), 
         2.5px 2.5px 0px 0px #EBE451, 
@@ -109,15 +110,16 @@ form {
 
 /* Form h2 styling */
 form h2 {
+    
     background-color: rgba(234, 255, 224, 0.529);
     display: inline-block;
-    line-height: 82px;
-    width: 560px;
-    height: 85px;
+    line-height: 61px;
+    width: 670px;
+    height: 65px;
     font-size: 58px;
     font-weight: lighter;
     text-align: center;
-    margin-left: 105px;
+    margin: -10px 0px 0px 55px;
 }
 
 /* Input styling */
@@ -126,7 +128,7 @@ input {
     background: transparent;
     border: none;
     border-bottom: 2.5px solid #7A7A7A;
-    margin: 70px 0px 0 30px;
+    margin: 60px 0px 0 30px;
     width: 350px;
     height: 40px;
 }
@@ -157,31 +159,38 @@ button {
     font-size: 42px;
     color: rgb(0, 0, 0);
 }
-.add{
-    background-color: #BBB62E;
+
+/* Button styling */
+.add {
+    width: 180px;
+    height: 55px;
+    background-color: #BBB62E; 
 }
 
-.stuffs{
+/* Styling for elements with class 'stuffs' */
+.stuffs {
     background-color: transparent; 
-    width: 40px;
+    width: 40px; 
     height: 40px;
-    margin-right: 165px;
-    padding: 0px;
+    margin-right: 138px; 
+    padding: 0px; 
+    cursor: pointer;
 }
 
-.stuffs img{
-    width: 27px;
-    height: auto;
+/* Styling for images within elements with class 'stuffs' */
+.stuffs img {
+    width: 27px; 
+    height: auto; 
 }
 
 /* Cancel button styling */
 #cancel {
     float: right;
-    margin-top: -15px;
-    margin-right: 10px;
-    background-color: #FFFCBD;
-    border-radius: 50%;
-    width: 37px;
+    margin-top: -19px;
+    margin-right: 5px;
+    background-color: #FFFCBD; 
+    border-radius: 50%; 
+    width: 37px; 
     height: 37px;
     position: relative;
     overflow: hidden;
@@ -189,71 +198,83 @@ button {
 
 /* Cancel button image styling */
 #cancel img {
-    width: 35px;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 28px; 
+    height: 28px; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
 }
 
 /* List styling */
 ul {
-    display: grid;
-    flex-wrap: wrap;
-    width: 100%;
+    display: grid; 
+    flex-wrap: wrap; 
+    width: 100%; 
 }
 
+/* Styling for list items within the unordered list */
 ul li {
-    margin: 4.175px 0 4.175px 90px;
-    font-size: 38px;
-    display: flex;
-    position: relative;
+    margin: 3.521px 0 3.521px 90px; 
+    font-size: 38px; 
+    display: flex; 
+    position: relative; 
 }
 
 /* Completed list item styling */
-.completed {
-    text-decoration: underline;
-    text-decoration-color: #FF0000;
-    text-underline-offset: 0.1em;
+.warning {
+    text-decoration: underline; 
+    text-decoration-color: #FF0000; 
+    text-decoration-thickness: 2.5px;
+    text-underline-offset: 0.1em; 
 }
 
 /* Checkbox styling */
 .checkbox {
-    width: 30px;
-    height: 30px;
-    margin: 15px 30px 0 0px;
+    width: 25px;
+    height: 25px; 
+    margin: 15px 5px 0 5px; 
+    cursor: pointer;
 }
 
-/* When the checkbox is checked, the text is struck through */
+.checkbox span{
+    background-color: #989898;
+}
+
+/* When the checkbox is checked, style the adjacent span element */
 .checkbox:checked ~ span {
-    text-decoration: line-through;
-    text-decoration-color: rgba(27, 142, 27, 0.921); 
-    text-decoration-thickness: 4px;
+    text-decoration: line-through; 
+    text-decoration-color: rgba(18, 172, 18, 0.7); 
+    text-decoration-thickness: 2.5px;
 }
 
-.descrip{
+/* Styling for elements with class 'descrip' */
+.descrip {
     width: 0px;
-    height: 0px;
-    display: none;
+    height: 0px; 
+    display: none; 
 }
 
-.plus{
-    margin: 15px 30px 0 0px;
-    width: 27px;
-    height: 27px;
+/* Styling for elements with class 'plus' */
+.plus {
+    margin: 15px 30px 0 0px; 
+    width: 25px; 
+    height: 25px; 
+    cursor: pointer;
 }
 
-.button_remove{
-    background-color: transparent;
-    width: 60px;
-    height: auto;
-    margin-left: auto;
-    padding: 0px;
+/* Styling for elements with class 'button_remove' */
+.button_remove {
+    background-color: transparent; 
+    width: 35px; 
+    height: auto; 
+    padding: 0px; 
+    margin-right: 5px;
 }
 
-.button_remove img{
-    width: 30px;
-    height: auto;
-    text-align: center;
+/* Styling for images within elements with class 'button_remove' */
+.button_remove img {
+    width: 25px; 
+    height: auto; 
+    text-align: center; 
 }
